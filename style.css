@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+body {
+    background-color: #060911;
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding: 20px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    max-width: 850px;
+}
+
+.canvas-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    touch-action: none; /* Mobilde kaydırmayı engelleyip kesim yaptırır */
+}
+
+canvas {
+    background: transparent;
+    display: block;
+    width: 100%;
+    height: auto;
+    cursor: crosshair;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+.canvas-hint {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.4);
+    pointer-events: none;
+    font-weight: 500;
+}
+
+.ui-container { margin-top: 24px; }
+h2 { font-size: 26px; font-weight: 800; color: #f8fafc; margin-bottom: 8px; }
+p { color: #94a3b8; font-size: 15px; margin-bottom: 24px; max-width: 600px; margin: 0 auto 24px auto; }
+.action-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+.btn {
+    padding: 13px 28px; text-decoration: none; font-size: 14px;
+    font-weight: 700; border-radius: 10px; transition: all 0.25s ease;
+    cursor: pointer; border: none;
+}
+.btn-primary { background-color: #ef4444; color: #fff; box-shadow: 0 4px 15px rgba(239, 68, 68, 0.35); }
+.btn-primary:hover { background-color: #f87171; transform: translateY(-2px); }
+.btn-secondary { background-color: #1e293b; color: #f8fafc; border: 1px solid #334155; }
+.btn-secondary:hover { background-color: #334155; transform: translateY(-2px); }
